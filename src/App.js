@@ -3,7 +3,8 @@ import './App.css';
 import './css/style.css';
 import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
-import {Route} from 'react-router-dom'
+import {Route, Switch} from 'react-router-dom';
+import Header from './components/header/header-component';
 
 
 // const AboutPage = () => (
@@ -23,8 +24,11 @@ class App extends React.Component{
   render(){
     return(
       <div>
-        <Route exact={true} path="/" component={HomePage} />
-        <Route exact={true} path="/shop" component={ShopPage} />
+        <Header />
+        <Switch>
+          <Route exact={true} path="/" component={HomePage} />
+          <Route exact={true} path="/shop" component={ShopPage} />
+        </Switch>
       </div>
     
     )
