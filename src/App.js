@@ -5,6 +5,7 @@ import HomePage from './pages/homepage/homepage.component';
 import ShopPage from './pages/shop/shop.component';
 import {Route, Switch} from 'react-router-dom';
 import Header from './components/header/header-component';
+import SignAndSignup from './pages/sign-in-and-sign-up/sign-in-and-sign-up'
 
 
 // const AboutPage = () => (
@@ -26,8 +27,9 @@ class App extends React.Component{
       <div>
         <Header />
         <Switch>
-          <Route exact={true} path="/" component={HomePage} />
+          <Route exact={true} path="/" component={HomePage} /> 
           <Route exact={true} path="/shop" component={ShopPage} />
+          <Route exact={true} path="/sign" component={SignAndSignup} />
         </Switch>
       </div>
     
